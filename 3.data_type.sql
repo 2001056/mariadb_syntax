@@ -99,3 +99,4 @@ select * from post where created_time>=2025-11-01 and created_time<=2025-11-19; 
 -- 날짜데이터 범위 조회는 위 방식이 가장 적절하다.
 
 
+-- 
