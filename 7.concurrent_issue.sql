@@ -58,4 +58,4 @@ call concurrent_test1();
 select post_count from author where id=2 for update;
 
 
--- serializable : 모든 트랜잭션 순차적 실행 -> 동시성문제없음()
+-- serializable : 모든 트랜잭션 순차적 실행 -> 동시성문제없음(성능저하)
