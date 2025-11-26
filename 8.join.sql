@@ -138,3 +138,12 @@ WHERE STATUS = 'DONE'
 GROUP BY U.USER_ID
 HAVING SUM(B.PRICE) >= 700000
 ORDER BY SUM(B.PRICE);
+
+-- 다중열 group by 
+-- group by 첫번째컬럼,두번째컬럼 : 첫번째 컬럼으로 grouping 후 두번째 컬럼으로 gruoping
+-- post 테이블에서 작성자별로 구분하여 같은 제목의 글의 개수를 출력하시오.
+select author_id,title,count(title) as '글' from post group by author_id,title;
+
+-- 재구매가 일어난 상품과 회원 리스트 구하기
+SELECT USER_ID,PRODUCT_ID AS PRODUCT_ID FROM ONLINE_SALE GROUP BY USER_ID,PRODUCT_ID HAVING COUNT(PRODUCT_ID) >= 2 ORDER BY USER_ID ASC,PRODUCT_ID DESC;
+
