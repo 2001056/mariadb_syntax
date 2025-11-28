@@ -143,6 +143,3 @@ inner join products p on d.pro_id = p.id;
 select u.name,a.addr from user u inner join address a on u.id = a.user_id; 
 
 
-
-
-
